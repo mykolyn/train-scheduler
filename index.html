@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Train Scheduler
+        </a>
+    </nav>
+    <!-- start of container -->
+    <div class="container">
+        <!-- header -->
+        <div class="jumbotron jumbotron-fluid train-card">
+            <div class="container">
+                <h1 class="display-4">Train Scheduler</h1>
+                <p class="lead">Thomas the tank engine commin' town</p>
+            </div>
+        </div>
+        <!-- schedule output -->
+        <div class="card text train-card">
+            <div class="card-header">
+                Current Train Schedule
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">BART</h5>
+                <p class="card-text">Why are our trains always late</p>
+                <!-- table with data -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(minutes)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thomas the Tank Engine</td>
+                            <td>Pallete Town</td>
+                            <td>2 minute</td>
+                            <td>6:05 PM</td>
+                            <td>1</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- end of table -->
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                Updated 2 mins ago
+            </div>
+        </div>
+        <!-- add train -->
+        <div class="card train-card">
+            <div class="card-header">
+                Add Train
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Fill out form below</h5>
+                <p class="card-text">Contact IT department for support</p>
+                <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Train Name</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Big Bertha">
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Destination</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Atlantis">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="21:30">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">Frequency (min)</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="5">
+                      </div>
+                  </form>
+                <a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+        <!-- end of container -->
+    </div>
+</body>
+
+
+<!-- javascript -->
+
+<script src="assets/javascript/javascript.js"></script>
+
+</html>
