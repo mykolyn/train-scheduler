@@ -7,15 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
 
+
+
     <!-- bootstrap.css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+
+
+
+
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- moment js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 
 
 
@@ -25,8 +35,7 @@
     <!-- navbar -->
     <nav class="navbar fixed-top navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="assets/icons/icons8-subway-64.png" width="30" height="30"
-                class="d-inline-block align-top" alt="">
+            <img src="assets/icons/icons8-subway-64.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Train Scheduler
         </a>
     </nav>
@@ -48,7 +57,7 @@
                 <h5 class="card-title">BART</h5>
                 <p class="card-text">Why are our trains always late</p>
                 <!-- table with data -->
-                <table class="table">
+                <table class="table" id="train-table">
                     <thead>
                         <tr>
                             <th scope="col">Train Name</th>
@@ -61,11 +70,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Thomas the Tank Engine</td>
-                            <td>Pallete Town</td>
-                            <td>2 minute</td>
-                            <td>6:05 PM</td>
-                            <td>1</td>
+                            <td id="train-name">Thomas the Tank Engine</td>
+                            <td id="class">Pallete Town</td>
+                            <td id="freq">2 minute</td>
+                            <td id="next-arrival">6:05 PM</td>
+                            <td id="mins-away">1</td>
 
                         </tr>
                     </tbody>
@@ -87,22 +96,22 @@
                 <p class="card-text">Contact IT department for support</p>
                 <form>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">Train Name</label>
-                      <input type="text" class="form-control" id="train-name" placeholder="Big Bertha">
+                        <label for="formGroupExampleInput">Train Name</label>
+                        <input type="text" class="form-control" id="train-name" placeholder="Big Bertha">
                     </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput2">Destination</label>
-                      <input type="text" class="form-control" id="dest" placeholder="Atlantis">
+                        <label for="formGroupExampleInput2">Destination</label>
+                        <input type="text" class="form-control" id="dest" placeholder="Atlantis">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput">First Train Time (HH:mm - military time)</label>
                         <input type="text" class="form-control" id="first-train" placeholder="21:30">
-                      </div>
-                      <div class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="formGroupExampleInput2">Frequency (min)</label>
                         <input type="text" class="form-control" id="freq" placeholder="5">
-                      </div>
-                  </form>
+                    </div>
+                </form>
                 <a href="#" class="btn btn-primary" id="train-form-submit">Submit</a>
             </div>
         </div>
@@ -110,7 +119,10 @@
     </div>
 </body>
 
-
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
 <!-- javascript -->
 
 <script src="assets/javascript/js.js"></script>
